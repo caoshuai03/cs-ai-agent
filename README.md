@@ -74,31 +74,17 @@ cs-ai-agent/
 │   │   │   └── com/
 │   │   │       └── cs/
 │   │   │           └── csaiagent/
-│   │   │               ├── 
-CsAiAgentApplication.java  # 应用启动类
-│   │   │               ├── 
-advisor/                 # 自定义 
-Advisor 模块
-│   │   │               ├── 
-app/                     # 应用核心业务逻
-辑 (如 LoveApp)
-│   │   │               ├── 
-chatmemory/              # 聊天记忆实现
-│   │   │               ├── 
-mapper/                  # MyBatis-Plus 
-Mapper 接口
-│   │   │               ├── 
-pojo/                    # 实体类
-│   │   │               └── 
-service/                 # 服务层接口及实
-现
+│   │   │               ├── CsAiAgentApplication.java  # 应用启动类
+│   │   │               ├── advisor/                 # 自定义 Advisor 模块
+│   │   │               ├── app/                     # 应用核心业务逻辑 (如 LoveApp)
+│   │   │               ├── chatmemory/              # 聊天记忆实现
+│   │   │               ├── mapper/                  # MyBatis-Plus Mapper 接口
+│   │   │               ├── pojo/                    # 实体类
+│   │   │               └── service/                 # 服务层接口及实现
 │   │   └── resources/
-│   │       ├── application.yml      # 
-应用配置文件
-│   │       └── prohibited-words.txt # 
-违禁词列表
-├── pom.xml                      # 
-Maven 项目配置文件
+│   │       ├── application.yml      # 应用配置文件
+│   │       └── prohibited-words.txt # 违禁词列表
+├── pom.xml                      # Maven 项目配置文件
 └── README.md                    # 项目
 说明文档
 ```
@@ -106,4 +92,4 @@ Maven 项目配置文件
 欢迎提交 Pull Request 或报告 Issue。
 
 ## 许可证
-本项目采用 MIT 许可证。
+本项目采用 Apache 许可证。
