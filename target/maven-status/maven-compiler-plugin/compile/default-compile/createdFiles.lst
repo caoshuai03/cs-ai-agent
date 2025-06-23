@@ -1,0 +1,4 @@
+com\cs\csaiagent\pojo\ChatMemory.class
+com\cs\csaiagent\service\ChatMemoryService.class
+com\cs\csaiagent\pojo\ChatMemory$ChatMemoryBuilder.class
+com\cs\csaiagent\mapper\ChatMemoryMapper.class

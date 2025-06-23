@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: cs-ai-agent
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      chat:
+        model: qwen-plus
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cs_ai_agent?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+server:
+  port: 8102
+  servlet:
+    context-path: /api
+
+# springdoc配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.xiaominfo.knife4j.demo.web
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# 修改日志级别，查看 Spring AI 更多调用细节
+logging:
+  level:
+    org.springframework.ai: DEBUG
+
+
