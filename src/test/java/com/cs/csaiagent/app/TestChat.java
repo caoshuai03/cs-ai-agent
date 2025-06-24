@@ -35,6 +35,7 @@ public class TestChat {
 
     @Test
     void doChatWithReport() {
+        // 测试 AI 恋爱报告功能
         String chatId = UUID.randomUUID().toString();
         String message = "你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做";
         LoveApp.LoveReport loveReport = loveApp.doChatWithReport(message, chatId);
@@ -43,8 +44,8 @@ public class TestChat {
 
     @Test
     void testProhibitedWordAdvisor() {
+        // 测试违禁词拦截器
         String chatId = UUID.randomUUID().toString();
-
         // 测试正常消息能正常回复
         String normalMessage = "你好，我是程序员，请给我一些恋爱建议";
         String answer = loveApp.doChat(normalMessage, chatId);
@@ -69,6 +70,16 @@ public class TestChat {
                 () -> loveApp.doChat(prohibitedMessage2, chatId));
         Assertions.assertTrue(exception.getMessage().contains("违禁词"));
     }
+
+    @Test
+    void doChatWithRag() {
+        // 测试 RAG 知识库问答功能
+        String chatId = UUID.randomUUID().toString();
+        String message = "我已经结婚了，但是婚后关系不太亲密，怎么办？";
+        String answer = loveApp.doChatWithRag(message, chatId);
+        Assertions.assertNotNull(answer);
+    }
+
 
 
 }

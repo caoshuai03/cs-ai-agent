@@ -8,13 +8,33 @@ spring:
         model: qwen-plus
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cs_ai_agent?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
+    mysql:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/cs_ai_agent?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: 123456
+    postgres:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://rm-cn-zky4bjxgt0004fmo.rwlb.rds.aliyuncs.com:5432/test1
+      username: testuser
+      password: 2269132052CScs
+
+  vectorstore:
+    pgvector:
+      index-type: HNSW
+      dimensions: 1536
+      distance-type: COSINE_DISTANCE
+      max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+
+
+#    driver-class-name: com.postgresql.Driver
+#    url: rm-cn-zky4bjxgt0004fmo.rwlb.rds.aliyuncs.com
+#    port: 5432
+#    username: testuser
+#    password: 2269132052CScs
 
 server:
-  port: 8102
+  port: 8123
   servlet:
     context-path: /api
 
