@@ -41,6 +41,8 @@ server:
     connection-timeout: 60000 # 连接超时时间，单位毫秒
     keep-alive-timeout: 60000 # 保持连接超时时间，单位毫秒
 
+search-api:
+  api-key: ${SEARCHAPI_API_KEY}
 # springdoc配置
 springdoc:
   swagger-ui:
