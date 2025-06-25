@@ -37,6 +37,9 @@ server:
   port: 8123
   servlet:
     context-path: /api
+  tomcat:
+    connection-timeout: 60000 # 连接超时时间，单位毫秒
+    keep-alive-timeout: 60000 # 保持连接超时时间，单位毫秒
 
 # springdoc配置
 springdoc:
@@ -49,7 +52,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: com.xiaominfo.knife4j.demo.web
+      packages-to-scan: com.cs.csaiagent.controller
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
   enable: true

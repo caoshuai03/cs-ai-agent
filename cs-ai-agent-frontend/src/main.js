@@ -1,12 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { createHead } from '@vueuse/head'
-import './style.css'
+import ArcoVue from '@arco-design/web-vue'
+import '@arco-design/web-vue/dist/arco.css'
+import { Message } from '@arco-design/web-vue'
 
 const app = createApp(App)
-const head = createHead()
 
 app.use(router)
-app.use(head)
+app.use(ArcoVue)
+app.config.globalProperties.$message = Message
+
 app.mount('#app')

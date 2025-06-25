@@ -44,9 +44,6 @@ public class PgVectorVectorStoreConfig {
                 .build();
         // 加载文档
         List<Document> documents = loveAppDocumentLoader.loadMarkdowns();
-        for (Document doc : documents) {
-            System.out.println("Metadata for document: " + doc.getMetadata());
-        }
         vectorStore.add(documents);
         return vectorStore;
     }
