@@ -332,7 +332,15 @@ public class PDFGenerationTool {
 
             String imageUrl = matcher.group(2);
             try {
-                Image image = new Image(ImageDataFactory.create(new URL(imageUrl)));
+                Image image;
+                // 尝试将路径解析为文件，如果存在则按文件处理
+                java.io.File imageFile = new java.io.File(imageUrl);
+                if (imageFile.exists() && imageFile.isFile()) {
+                    image = new Image(ImageDataFactory.create(imageFile.toURI().toURL()));
+                } else {
+                    // 否则按URL处理
+                    image = new Image(ImageDataFactory.create(new URL(imageUrl)));
+                }
                 image.setWidth(document.getPdfDocument().getDefaultPageSize().getWidth() * 0.8f);
                 image.setAutoScale(true);
                 document.add(image);

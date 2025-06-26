@@ -1,9 +1,6 @@
 # 构建输出
 /target/
 
-# 临时文件
-/tmp/
-
 # IntelliJ IDEA files
 .idea/
 *.iml
@@ -31,3 +28,4 @@ Thumbs.db
 # application-dev.yml
 # /cs-ai-agent-frontend/
 src/main/resources/
+/tmp/
