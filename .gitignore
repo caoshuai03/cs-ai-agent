@@ -1,1 +1,33 @@
-/cs-ai-agent-frontend/
+# 构建输出
+/target/
+
+# 临时文件
+/tmp/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Log files
+*.log
+
+# Package Files
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Sensitive configuration files (adjust as needed)
+# application-prod.yml
+# application-dev.yml
+# /cs-ai-agent-frontend/
+src/main/resources/
