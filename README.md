@@ -1,8 +1,14 @@
-# cs-ai-agent
 
-🤖 欢迎来到 `cs-ai-agent` 项目！
 
+
+<center>
+  <img src="src/main/resources/logo.png" alt="Logo" />
+</center>
+
+<center>
 本项目是一个基于 Spring Boot 的智能 AI 代理应用，旨在提供智能对话服务。核心功能包括集成阿里云通义千问 (DashScope) 模型，实现了数据库持久化和多轮对话记忆管理。项目还支持流式调用、自定义 Advisor、RAG 检索增强、结构化输出、工具集成和 MCP 协议等功能。
+</center>
+
 
 ## 🛠️ 技术栈
 

@@ -29,3 +29,6 @@ Thumbs.db
 # /cs-ai-agent-frontend/
 src/main/resources/
 /tmp/
+
+/target/
+
