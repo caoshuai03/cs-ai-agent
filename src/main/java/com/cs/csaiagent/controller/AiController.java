@@ -1,5 +1,6 @@
 package com.cs.csaiagent.controller;
 
+import com.cs.csaiagent.agent.CsManus;
 import com.cs.csaiagent.app.LoveApp;
 import jakarta.annotation.Resource;
 import org.springframework.ai.chat.model.ChatModel;
@@ -31,6 +32,9 @@ public class AiController {
 
     @Resource
     private ChatModel dashscopeChatModel;
+
+    @Resource
+    private CsManus csManus;
 
     /**
      * 同步调用 AI 恋爱大师应用
@@ -101,10 +105,9 @@ public class AiController {
      * @param message
      * @return
      */
-   /* @GetMapping("/manus/chat")
+    @GetMapping("/manus/chat")
     public SseEmitter doChatWithManus(String message) {
-        YuManus yuManus = new YuManus(allTools, dashscopeChatModel);
-        return yuManus.runStream(message);
-    }*/
+        return csManus.runStream(message);
+    }
 }
 

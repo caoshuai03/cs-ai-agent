@@ -131,9 +131,9 @@ public class TestChat {
     void doChatWithMcp() {
         String chatId = UUID.randomUUID().toString();
         // 测试地图 MCP
-//        String message = "输出成都的经纬度";
+        String message = "输出成都的经纬度，和附近5公里餐馆的经纬度";
         // 测试时间 MCP
-        String message = "生成一份'七夕约会计划'PDF，包含餐厅预订、活动流程和礼物清单，请配上餐厅的图片和地址链接";
+//        String message = "现在几点了？";
         String answer =  loveApp.doChatWithMcp(message, chatId);
         Assertions.assertNotNull(answer);
     }
