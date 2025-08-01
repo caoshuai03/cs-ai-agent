@@ -6,10 +6,10 @@ spring:
       api-key: ${DASHSCOPE_API_KEY}
       chat:
         model: qwen-plus-latest
-#    mcp:
-#      client:
-#        stdio:
-#          servers-configuration: classpath:mcp-servers.json
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:mcp-servers.json
 
   datasource:
     mysql:
