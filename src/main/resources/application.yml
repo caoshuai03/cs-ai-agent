@@ -5,16 +5,30 @@ spring:
     dashscope:
       api-key: ${DASHSCOPE_API_KEY}
       chat:
-        model: qwen-plus
+        model: qwen-plus-latest
+#    mcp:
+#      client:
+#        stdio:
+#          servers-configuration: classpath:mcp-servers.json
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cs_ai_agent?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
+    mysql:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/cs_ai_agent?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: 123456
+    postgres:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://rm-cn-zky4bjxgt0004fmo.rwlb.rds.aliyuncs.com:5432/test1
+      username: testuser
+      password: 2269132052CScs
+
+search-api:
+  api-key: ${SEARCHAPI_API_KEY}
+
 
 server:
-  port: 8102
+  port: 8123
   servlet:
     context-path: /api
 
